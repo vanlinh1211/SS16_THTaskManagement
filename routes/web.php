@@ -11,5 +11,7 @@
 |
 */
 
-Route::get('/', 'TaskController@index')->name('index');
-Route::get('/show', 'TaskController@showTask')->name('show');
+Route::get('/', 'TaskController@index')->name('tasks.index');
+Route::get('/show', 'TaskController@showTask')->name('tasks.show');
+Route::get('/tasks/create', 'TaskController@create')->name('tasks.create');
+Route::post('/tasks', 'TaskController@store')->name('tasks.store');

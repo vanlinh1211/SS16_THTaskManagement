@@ -44,8 +44,10 @@
                             <td scope="row">{{ ++$key }}</td>
                             <td>{{ $task->title }}</td>
                             <td>{{ $task->content }}</td>
-                            <td>{{ $task->created_at }}</td>
-                            <td>{{ $task->due_date }}</td>
+                            <td>{{ $task->date }}</td>
+                            <td>
+                                <img src="{{ asset('storage/images/' . $task->image) }}" alt="" style="width: 150px">
+                            </td>
                         </tr>
                     @endforeach
                 @endif
